@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "industrial:tungsten_jewel"
+        }
+    },
+    "result": {
+        "item": "industrial:tungsten_helmet",
+        "count": 1
+    }
+}

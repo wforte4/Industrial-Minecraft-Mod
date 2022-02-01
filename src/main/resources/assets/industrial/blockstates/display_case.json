@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model" : "industrial:block/display_case", "y": 90 },
+		"facing=east": { "model" : "industrial:block/display_case", "y": 180 },
+		"facing=south": { "model" : "industrial:block/display_case", "y": 270 },
+		"facing=west": { "model" : "industrial:block/display_case", "y": 0 }
+	}
+}

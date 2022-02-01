@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "D#D",
+        "BBB"
+    ],
+    "key": {
+        "#": {
+            "item": "industrial:tungsten_jewel"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "B": {
+            "item": "industrial:obsidian_stick"
+        }
+    },
+    "result": {
+        "item": "industrial:tungsten_sword",
+        "count": 1
+    }
+}

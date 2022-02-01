@@ -1,0 +1,7 @@
+{ 
+	"parent": "block/cross",
+	"textures": {
+		"cross": "industrial:blocks/example_sapling",
+		"particle": "industrial:blocks/example_sapling"
+	}
+}

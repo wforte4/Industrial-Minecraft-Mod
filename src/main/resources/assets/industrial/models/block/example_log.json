@@ -1,0 +1,7 @@
+{ 
+	"parent": "block/cube_column",
+	"textures": {
+		"end": "industrial:blocks/example_log_top",
+		"side": "industrial:blocks/example_log"
+	}
+}

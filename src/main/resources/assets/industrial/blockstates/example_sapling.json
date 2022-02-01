@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model" : "industrial:block/example_sapling" }
+	}
+}

@@ -1,0 +1,24 @@
+{ 
+	"item.industrial.tungsten_shard": "Tungsten Shard",
+	"item.industrial.tungsten_jewel": "Tungsten Jewel",
+	"item.industrial.tungsten_sword": "Tungsten Sword",
+	"item.industrial.tungsten_shovel": "Tungsten Shovel",
+	"item.industrial.tungsten_axe": "Tungsten Axe",
+	"item.industrial.tungsten_pickaxe": "Tungsten Pickaxe",
+	"item.industrial.tungsten_hoe": "Tungsten Hoe",
+	"item.industrial.tungsten_leggings": "Tungsten Leggings",
+	"item.industrial.tungsten_boots": "Tungsten Boots",
+	"item.industrial.tungsten_helmet": "Tungsten Helmet",
+	"item.industrial.tungsten_chestplate": "Tungsten Chestplate",
+	"item.industrial.obsidian_stick": "Obsidian Stick",
+	
+	"block.industrial.tungsten_ore": "Tungsten Ore",
+	"block.industrial.yellow_grass": "Yellow Grass",
+	"block.industrial.display_case": "Display Case",
+	"block.industrial.example_log": "Example Log",
+	"block.industrial.example_stripped_log": "Example Stripped Log",
+	"block.industrial.example_leaves": "Example Leaves",
+	"block.industrial.example_sapling": "Example Sapling",
+	
+	"itemGroup.industrial": "Industrial Mod"
+}

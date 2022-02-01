@@ -1,0 +1,9 @@
+{ 
+	"parent": "block/orientable",
+	"textures": {
+		"top": "industrial:blocks/yellow_grass_top",
+		"bottom": "industrial:blocks/yellow_grass_bottom",
+		"side": "industrial:blocks/yellow_grass_side",
+		"front": "industrial:blocks/yellow_grass_side"
+	}
+}
