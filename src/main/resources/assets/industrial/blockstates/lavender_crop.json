@@ -1,28 +1,28 @@
 {
 	"variants": {
 		"age=0": {
-			"model": "industrial/lavender_stage0"
+			"model": "industrial:block/lavender_stage0"
 		},
 		"age=1": {
-			"model": "industrial/lavender_stage1"
+			"model": "industrial:block/lavender_stage1"
 		},
 		"age=2": {
-			"model": "industrial/lavender_stage2"
+			"model": "industrial:block/lavender_stage2"
 		},
 		"age=3": {
-			"model": "industrial/lavender_stage3"
+			"model": "industrial:block/lavender_stage3"
 		},
 		"age=4": {
-			"model": "industrial/lavender_stage4"
+			"model": "industrial:block/lavender_stage4"
 		},
 		"age=5": {
-			"model": "industrial/lavender_stage5"
+			"model": "industrial:block/lavender_stage5"
 		},
 		"age=6": {
-			"model": "industrial/lavender_stage6"
+			"model": "industrial:block/lavender_stage6"
 		},
 		"age=7": {
-			"model": "industrial/lavender_stage7"
+			"model": "industrial:block/lavender_stage7"
 		}
 	}
 }

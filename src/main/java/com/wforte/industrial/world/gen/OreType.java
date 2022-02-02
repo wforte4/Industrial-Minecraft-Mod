@@ -7,6 +7,8 @@ import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
 
+	RUBY(Lazy.of(BlockInit.RUBY_ORE), 8, 16, 40),
+	RAINBOW(Lazy.of(BlockInit.RAINBOW_ORE), 6, 12, 30),
 	TUNGSTEN(Lazy.of(BlockInit.TUNGSTEN_ORE), 4, 0, 20);
 
 	private final Lazy<Block> block;

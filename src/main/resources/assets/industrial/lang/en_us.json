@@ -1,6 +1,6 @@
 { 
 	"item.industrial.tungsten_shard": "Tungsten Shard",
-	"item.industrial.tungsten_jewel": "Tungsten Jewel",
+	"item.industrial.tungsten_jewel": "Tungsten",
 	"item.industrial.tungsten_sword": "Tungsten Sword",
 	"item.industrial.tungsten_shovel": "Tungsten Shovel",
 	"item.industrial.tungsten_axe": "Tungsten Axe",
@@ -11,14 +11,23 @@
 	"item.industrial.tungsten_helmet": "Tungsten Helmet",
 	"item.industrial.tungsten_chestplate": "Tungsten Chestplate",
 	"item.industrial.obsidian_stick": "Obsidian Stick",
-	
+	"item.industrial.ruby": "Ruby",
+	"item.industrial.ruby_sword": "Ruby Sword",
+	"item.industrial.ruby_shovel": "Ruby Shovel",
+	"item.industrial.ruby_axe": "Ruby Shovel",
+	"item.industrial.ruby_pickaxe": "Ruby Pickaxe",
+	"item.industrial.ruby_hoe": "Ruby Hoe",
+
 	"block.industrial.tungsten_ore": "Tungsten Ore",
+	"block.industrial.ruby_ore": "Ruby Ore",
+	"block.industrial.rainbow_ore": "Rainbow Ore",
 	"block.industrial.yellow_grass": "Yellow Grass",
 	"block.industrial.display_case": "Display Case",
 	"block.industrial.example_log": "Example Log",
 	"block.industrial.example_stripped_log": "Example Stripped Log",
 	"block.industrial.example_leaves": "Example Leaves",
 	"block.industrial.example_sapling": "Example Sapling",
-	
+	"block.industrial.lavender_crop": "Lavender",
+
 	"itemGroup.industrial": "Industrial Mod"
 }

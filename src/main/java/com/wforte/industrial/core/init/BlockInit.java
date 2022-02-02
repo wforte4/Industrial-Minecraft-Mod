@@ -5,7 +5,7 @@ import com.wforte.industrial.IndustrialMod;
 import com.wforte.industrial.common.block.DisplayCaseBlock;
 import com.wforte.industrial.common.block.IndustrialSaplingBlock;
 import com.wforte.industrial.common.block.LavenderCropBlock;
-import com.wforte.industrial.core.itemgroup.IndustrialModItemGroup;
+import com.wforte.industrial.core.itemgroup.ModGroup;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -53,13 +53,20 @@ public class BlockInit {
 	public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore",
 			() -> new Block(AbstractBlock.Properties.create(Material.IRON, MaterialColor.GRAY)
 					.hardnessAndResistance(7f, 7f).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
+			() -> new Block(AbstractBlock.Properties.create(Material.IRON, MaterialColor.GRAY)
+					.hardnessAndResistance(3f, 3f).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	public static final RegistryObject<Block> RAINBOW_ORE = registerBlock("rainbow_ore",
+			() -> new Block(AbstractBlock.Properties.create(Material.IRON, MaterialColor.GRAY)
+					.hardnessAndResistance(3f, 3f).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
 	// Custom Blocks
 	public static final RegistryObject<Block> DISPLAY_CASE = registerBlock("display_case",
 			() -> new DisplayCaseBlock());
 	public static final RegistryObject<Block> LAVENDER_BLOCK = BLOCKS.register("lavender_crop",
 			() -> new LavenderCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
-	
+
+	// Register a Block and then call register Block Item to also make an item in inventory for this to place
 	private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 		RegistryObject<T> toReturn = BLOCKS.register(name, block);
 		registerBlockItem(name, toReturn);
@@ -67,7 +74,7 @@ public class BlockInit {
 	}
 	
 	private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-		ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(IndustrialModItemGroup.INDUSTRIAL_MOD)));
+		ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
 		
 	}
 

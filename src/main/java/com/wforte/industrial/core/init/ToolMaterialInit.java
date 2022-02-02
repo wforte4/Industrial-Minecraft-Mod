@@ -6,8 +6,10 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
 public enum ToolMaterialInit implements IItemTier {
-	
-	TUNGSTEN_TOOL(5, 3000, 10.0F, 5.0F, 20, () -> Ingredient.fromItems(ItemInit.TUNGSTEN_SHARD.get()));
+
+
+	RUBY_TOOL(4, 1200, 7.0f, 3.0f, 10, () -> Ingredient.fromItems(ItemInit.RUBY.get())),
+	TUNGSTEN_TOOL(5, 2000, 10.0F, 5.0F, 20, () -> Ingredient.fromItems(ItemInit.TUNGSTEN_SHARD.get()));
 	
 	private final int level;
 	private final int uses;

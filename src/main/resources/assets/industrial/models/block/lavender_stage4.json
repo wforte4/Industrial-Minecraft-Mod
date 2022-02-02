@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "industrial:blocks/lavender_stage4"
+  }
+}

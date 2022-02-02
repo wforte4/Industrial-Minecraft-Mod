@@ -5,11 +5,11 @@ import com.wforte.industrial.core.init.ItemInit;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
-public class IndustrialModItemGroup extends ItemGroup {
+public class ModGroup extends ItemGroup {
 	
-	public static final IndustrialModItemGroup INDUSTRIAL_MOD = new IndustrialModItemGroup(ItemGroup.GROUPS.length, "industrial");
+	public static final ModGroup INDUSTRIAL_MOD = new ModGroup(ItemGroup.GROUPS.length, "industrial");
 
-	public IndustrialModItemGroup(int index, String label) {
+	public ModGroup(int index, String label) {
 		super(index, label);
 	}
 
