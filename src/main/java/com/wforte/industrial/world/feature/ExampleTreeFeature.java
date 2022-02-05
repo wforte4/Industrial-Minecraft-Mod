@@ -21,8 +21,8 @@ public class ExampleTreeFeature extends Feature<NoFeatureConfig> {
 	
 	private static final Direction[] DIRECTIONS = new Direction[] { Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST };
 	
-	private static final BlockState LOG = BlockInit.EXAMPLE_LOG.get().getDefaultState();
-	private static final BlockState LEAVES = BlockInit.EXAMPLE_LEAVES.get().getDefaultState().with(LeavesBlock.DISTANCE, 1);
+	private static final BlockState LOG = BlockInit.LAVENDER_LOG.get().getDefaultState();
+	private static final BlockState LEAVES = BlockInit.LAVENDER_LEAVES.get().getDefaultState().with(LeavesBlock.DISTANCE, 1);
 
 	public ExampleTreeFeature(Codec<NoFeatureConfig> codec) {
 		super(codec);

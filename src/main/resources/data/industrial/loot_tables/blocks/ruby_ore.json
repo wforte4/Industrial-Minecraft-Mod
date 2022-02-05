@@ -6,7 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "industrial:ruby"
+          "name": "industrial:ruby_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            }
+          ]
         }
       ]
     }

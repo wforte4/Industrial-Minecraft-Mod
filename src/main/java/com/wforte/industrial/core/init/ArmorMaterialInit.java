@@ -10,6 +10,7 @@ import net.minecraft.util.SoundEvents;
 
 public enum ArmorMaterialInit implements IArmorMaterial {
 
+	RUBY_ARMOR("ruby", 8, new int[] { 3, 6, 8, 3}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 3f, .1f, () -> Ingredient.fromItems(ItemInit.RUBY.get())),
 	TUNGSTEN_ARMOR("tungsten", 10, new int[] { 4, 7, 9, 4 }, 17, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4f, 0.2f, () -> Ingredient.fromItems(ItemInit.TUNGSTEN_SHARD.get())),;
 
 	private static final int[] baseDurability = { 128, 144, 160, 112 };

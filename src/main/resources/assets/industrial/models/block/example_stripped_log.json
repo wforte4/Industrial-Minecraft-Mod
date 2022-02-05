@@ -1,7 +1,0 @@
-{ 
-	"parent": "block/cube_column",
-	"textures": {
-		"end": "industrial:blocks/example_stripped_log_top",
-		"side": "industrial:blocks/example_stripped_log"
-	}
-}

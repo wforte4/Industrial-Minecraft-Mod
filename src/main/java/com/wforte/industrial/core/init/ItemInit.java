@@ -1,8 +1,11 @@
 package com.wforte.industrial.core.init;
 
 import com.wforte.industrial.IndustrialMod;
+import com.wforte.industrial.common.item.ModSpawnEggItem;
+import com.wforte.industrial.common.item.SpeedStick;
 import com.wforte.industrial.core.itemgroup.ModGroup;
 
+import com.wforte.industrial.entity.ModEntityTypes;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
@@ -29,11 +32,26 @@ public class ItemInit {
             () -> new Item(new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             () -> new Item(new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<Item> RUBY_SHARD = ITEMS.register("ruby_shard",
+            () -> new Item(new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
     public static final RegistryObject<Item> OBSIDIAN_STICK = ITEMS.register("obsidian_stick",
             () -> new Item(new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
 
     public static final RegistryObject<Item> LAVENDER = ITEMS.register("lavender",
             () -> new BlockItem(BlockInit.LAVENDER_BLOCK.get(), new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+
+    // Food
+
+    // Spawn Eggs
+    public static final RegistryObject<ModSpawnEggItem> BUFF_ZOMBIE_SPAWN_EGG = ITEMS.register("buff_zombie_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.BUFF_ZOMBIE, 0x464F56, 0x1D6336, new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<ModSpawnEggItem> KNUCKLE_DRAGGER_SPAWN_EGG = ITEMS.register("knuckle_dragger_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.KNUCKLE_DRAGGER, 0xbaa6fe, 0xff5774, new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<ModSpawnEggItem> HOG_SPAWN_EGG = ITEMS.register("hog_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.HOG, 0x693d15, 0x815329, new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+
+    // Custom Items
+    public static final RegistryObject<Item> SPEED_STICK = ITEMS.register("speed_stick", () -> new SpeedStick(new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
 
     // Tools
     public static final RegistryObject<Item> TUNGSTEN_SWORD = ITEMS.register("tungsten_sword",
@@ -79,6 +97,18 @@ public class ItemInit {
                     new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
     public static final RegistryObject<Item> TUNGSTEN_BOOTS = ITEMS.register("tungsten_boots",
             () -> new ArmorItem(ArmorMaterialInit.TUNGSTEN_ARMOR, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
+            () -> new ArmorItem(ArmorMaterialInit.RUBY_ARMOR, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+            () -> new ArmorItem(ArmorMaterialInit.RUBY_ARMOR, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+            () -> new ArmorItem(ArmorMaterialInit.RUBY_ARMOR, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
+            () -> new ArmorItem(ArmorMaterialInit.RUBY_ARMOR, EquipmentSlotType.FEET,
                     new Item.Properties().group(ModGroup.INDUSTRIAL_MOD)));
 
 }

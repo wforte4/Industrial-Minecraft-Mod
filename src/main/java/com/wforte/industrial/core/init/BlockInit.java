@@ -3,17 +3,11 @@ package com.wforte.industrial.core.init;
 import com.google.common.base.Supplier;
 import com.wforte.industrial.IndustrialMod;
 import com.wforte.industrial.common.block.DisplayCaseBlock;
-import com.wforte.industrial.common.block.IndustrialSaplingBlock;
 import com.wforte.industrial.common.block.LavenderCropBlock;
+import com.wforte.industrial.common.block.trees.LavenderTree;
 import com.wforte.industrial.core.itemgroup.ModGroup;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.GrassBlock;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -36,18 +30,20 @@ public class BlockInit {
 			() -> new Block(AbstractBlock.Properties.create(Material.EARTH, MaterialColor.GRASS)
 					.hardnessAndResistance(4f).sound(SoundType.GROUND)));
 
-	public static final RegistryObject<Block> EXAMPLE_LOG = registerBlock("example_log",
+	public static final RegistryObject<Block> LAVENDER_LOG = registerBlock("lavender_log",
 			() -> new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD).sound(SoundType.WOOD)
 					.hardnessAndResistance(2f, 10f).harvestLevel(0).harvestTool(ToolType.AXE)));
-	public static final RegistryObject<Block> EXAMPLE_STRIPPED_LOG = registerBlock("example_stripped_log",
+	public static final RegistryObject<Block> LAVENDER_STRIPPED_LOG = registerBlock("lavender_stripped_log",
 			() -> new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD).sound(SoundType.WOOD)
 					.hardnessAndResistance(2f, 3f).harvestLevel(0).harvestTool(ToolType.AXE)));
-	public static final RegistryObject<Block> EXAMPLE_LEAVES = registerBlock("example_leaves",
+	public static final RegistryObject<Block> LAVENDER_LEAVES = registerBlock("lavender_leaves",
 			() -> new LeavesBlock(AbstractBlock.Properties.create(Material.LEAVES).sound(SoundType.PLANT)
 					.hardnessAndResistance(.2f, 1f).tickRandomly().notSolid()));
-	public static final RegistryObject<Block> EXAMPLE_SAPLING = registerBlock("example_sapling",
-			() -> new IndustrialSaplingBlock(AbstractBlock.Properties.create(Material.LEAVES).sound(SoundType.PLANT)
-					.hardnessAndResistance(0f).tickRandomly().notSolid(), null));
+	public static final RegistryObject<Block> LAVENDER_SAPLING = registerBlock("lavender_sapling",
+			() -> new SaplingBlock(new LavenderTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+	public static final RegistryObject<Block> LAVENDER_PLANKS = registerBlock("lavender_planks",
+			() -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+					.hardnessAndResistance(4f).sound(SoundType.WOOD)));
 
 	// ORE Blocks
 	public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore",
