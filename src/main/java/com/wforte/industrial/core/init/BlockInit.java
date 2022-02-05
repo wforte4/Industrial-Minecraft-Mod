@@ -17,6 +17,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.rmi.registry.Registry;
+
 public class BlockInit {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
@@ -44,6 +46,10 @@ public class BlockInit {
 	public static final RegistryObject<Block> LAVENDER_PLANKS = registerBlock("lavender_planks",
 			() -> new Block(AbstractBlock.Properties.create(Material.WOOD)
 					.hardnessAndResistance(4f).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> TUNGSTEN_BLOCK = registerBlock("tungsten_block",
+			() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(8f).sound(SoundType.METAL)));
+	public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
+			() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(8f).sound(SoundType.METAL)));
 
 	// ORE Blocks
 	public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore",

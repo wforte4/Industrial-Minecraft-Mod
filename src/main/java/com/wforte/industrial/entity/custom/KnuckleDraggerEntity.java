@@ -2,10 +2,7 @@ package com.wforte.industrial.entity.custom;
 
 import com.wforte.industrial.core.init.ItemInit;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
@@ -26,65 +23,59 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.player.AttackEntityEvent;
 
 import javax.annotation.Nullable;
 import java.util.function.Predicate;
 
 public class KnuckleDraggerEntity extends MonsterEntity {
 
-    public KnuckleDraggerEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
+    public KnuckleDraggerEntity(EntityType<? extends KnuckleDraggerEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 30.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 20.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.33D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 13.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 50.0D);
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 100.0D);
     }
 
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal( 1, new NearestAttackableTargetGoal<>( this, PlayerEntity.class, true ) );
-        this.goalSelector.addGoal(2, new LookRandomlyGoal(this));
-        this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0D, false ));
+        this.goalSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, true));
-        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, TurtleEntity.class, 10, true, false, TurtleEntity.TARGET_DRY_BABY));
+        this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
 
     }
 
     @Override
-    protected int getExperiencePoints(PlayerEntity player)
-    {
+    protected int getExperiencePoints(PlayerEntity player) {
         return 3 + this.world.rand.nextInt(5);
     }
 
     @Override
-    protected SoundEvent getAmbientSound()
-    {
+    protected SoundEvent getAmbientSound() {
         return SoundEvents.ENTITY_HOGLIN_AMBIENT;
     }
 
 
     @Override
-    protected SoundEvent getDeathSound()
-    {
+    protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_HOGLIN_DEATH;
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource damageSourceIn)
-    {
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.ENTITY_IRON_GOLEM_HURT;
     }
 
     @Override
-    protected void playStepSound(BlockPos pos, BlockState blockIn)
-    {
+    protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.ENTITY_HOGLIN_STEP, 0.20F, 0.5F);
     }
 
@@ -94,9 +85,8 @@ public class KnuckleDraggerEntity extends MonsterEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.BLINDNESS, 200,3));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WEAKNESS, 200));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 200));
+                ((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.BLINDNESS, 200, 3));
+                ((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 200));
             }
             return true;
         }

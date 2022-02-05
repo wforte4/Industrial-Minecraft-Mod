@@ -35,7 +35,7 @@ public class BuffZombieEntity extends ZombieEntity {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 20.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.33D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 13.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 8.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 50.0D);
     }
